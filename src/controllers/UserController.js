@@ -1,13 +1,14 @@
-const userModel = require("../models/User.js");
+// controllers/UserController.js
+const UserModel = require('../models/UserModel.js');
 
 class UserController {
         static async getUsers(req, res) {
                 try {
-                        var result = await userModel.getUser();
-                        res.send(result);
+                        const users = await UserModel.getUser();
+                        res.send(users);
                 } catch (error) {
                         console.error(error);
-                        res.status(500).send("Internal Server Error");
+                        res.status(500).send('Internal Server Error');
                 }
         }
 }
