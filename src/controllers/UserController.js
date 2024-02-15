@@ -1,4 +1,4 @@
-const UserModel = require('../models/UserModel.js');
+const UserModel = require('../models/AuthModel.js');
 
 class UserController {
         static async getUsers(req, res) {
